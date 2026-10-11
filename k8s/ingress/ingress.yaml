@@ -18,7 +18,7 @@ metadata:
     # HTTPS
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
     alb.ingress.kubernetes.io/ssl-redirect: "443"
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:ACCOUNT_ID:certificate/CERT_ID
+    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:747482682507:certificate/f6dc9993-a567-4e6c-8cdc-74d99617f953
 
     # Health checks
     alb.ingress.kubernetes.io/healthcheck-path: /api/v1/actuator/health
@@ -30,13 +30,13 @@ metadata:
     # alb.ingress.kubernetes.io/wafv2-acl-arn: arn:aws:wafv2:...
 
     # Security groups
-    alb.ingress.kubernetes.io/security-groups: sg-XXXXXXXXXX
+    alb.ingress.kubernetes.io/security-groups: sg-07d5346113b27f2f4
 
     # Tags
     alb.ingress.kubernetes.io/tags: "Environment=production,Project=med-erp"
 spec:
   rules:
-    - host: api.med-erp.yourdomain.com
+    - host: api.abhijitprojects.online
       http:
         paths:
           - path: /api/v1/auth
